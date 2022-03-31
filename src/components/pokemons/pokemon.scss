@@ -1,0 +1,39 @@
+.image {
+  background-color: #0000ffa6;
+  height: 30vh;
+  width: 25vh;
+  text-align: center;
+  margin: 4px;
+  display: inline-block;
+  position: relative;
+}
+
+.name{
+  text-align: center;
+  margin: 4px;
+  display: inline-block;
+  position: relative;
+  height: 30vh;
+  width: 25vh;
+  top: -575vh;
+  font-size: 12px;
+  color: darkblue;
+}
+
+.number{
+  text-align: center;
+  margin: 4px;
+  display: inline-block;
+  position: relative;
+  height: 30vh;
+  width: 25vh;
+  top: -500pc;
+  font-size: 12px;
+  color: azure;
+  top: -459pc;
+}
+
+.container{
+  background-color: aqua;
+  top: -459pc;
+}
