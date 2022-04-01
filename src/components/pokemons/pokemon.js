@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './pokemon.scss';
 import Images from './pokemonImages';
+import Names from './pokemonNames';
+import Numbers from './pokemonNumbers';
+import Header from '../header/header';
 
-const pokemonID = ('https://pokeapi.co/api/v2/pokemon/1');
 const pokemonList = ('https://pokeapi.co/api/v2/pokemon?limit=151');
 
-let pokeImg = Array.from({length: 151}, (_, i) => i + 1)
 function Pokemon(){
   const [data, setData] = useState([]);
 
@@ -27,23 +28,21 @@ function Pokemon(){
     });
   }
 
-
   return (
-  <div>
-  <Images />
-        {data.map(pokemon => (
-          <div key={pokemon.name} className="name">
-            <h1>{pokemon.name}</h1>
-          </div>
-        ))}
 
-        {pokeImg.map(num =>(
-          <div className='number'>
-            <h2># {num}</h2>
-          </div>
-        ))}
+    <div className='container'>
+      <div className='header-cont'>
+        <Header
+        data={data}
+        />
+      </div>
 
-  </div>
+      <Images />
+      <Names
+      data={data}
+      />
+      <Numbers />
+    </div>
 
   )
 }

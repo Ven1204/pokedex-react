@@ -4,18 +4,16 @@
   width: 25vh;
   text-align: center;
   margin: 4px;
-  display: inline-block;
   position: relative;
 }
 
 .name{
   text-align: center;
   margin: 4px;
-  display: inline-block;
   position: relative;
   height: 30vh;
   width: 25vh;
-  top: -575vh;
+  // top: -575vh;
   font-size: 12px;
   color: darkblue;
 }
@@ -23,17 +21,46 @@
 .number{
   text-align: center;
   margin: 4px;
-  display: inline-block;
   position: relative;
   height: 30vh;
   width: 25vh;
-  top: -500pc;
   font-size: 12px;
   color: azure;
-  top: -459pc;
 }
 
 .container{
-  background-color: aqua;
-  top: -459pc;
+  display: flex;
+  flex-flow: wrap;
+  background-color: rgb(27, 230, 27);
+  height: fit-content;
+  padding: 8px 40vh;
+  width: auto;
+}
+
+.image-container {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.name-container{
+  display: flex;
+  flex-flow: wrap;
+  position: absolute;
+  padding-right: 42vh;
+  top: 188px;
+}
+
+.num-container {
+  display: flex;
+  flex-flow: wrap;
+  position: absolute;
+  padding-right: 42vh;
+  top: 160px;
+}
+
+.header-cont{
+  background-color: blue;
+  width: 100%;
+  margin: 4px 16px 4px 4px;
+  padding: 0  20px;
 }
