@@ -1,11 +1,12 @@
-import Pokemon from './components/pokemons/pokemon';
 import React, { useState, useEffect } from 'react';
+import PokemonList from './components/pokemonList/pokemonList';
 
 function App() {
 
   return (
     <div>
-      <Pokemon />
+
+      <PokemonList />
     </div>
   );
 }

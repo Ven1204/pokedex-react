@@ -1,0 +1,141 @@
+$fire: conic-gradient(#ff0000, #7c0909, #ff2c2c, #b80000, #e96e6e, #670d0d, #ff0000);
+$water: conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff);
+$electric: conic-gradient(#ffc107, #ff9800, #edae51, #ff9800, #e4c494, #be8024, #ffbf00);
+$psychic: conic-gradient(#ea00ff, #ea00ff,#ea00ff, #ea00ff, #ea00ff, #ea00ff, #ea00ff);
+$flying: conic-gradient(#a1f3ec, #d3fffb, #aed3cf, #14b1a4, #e6eded, #4fc5bb, #a1f3ec);
+$normal: conic-gradient(#fdf3d3, #8b846c, #c5c5c5, #afaa9b, #f6df93, #f2f2f2, #fdf3d3);
+$fighting: conic-gradient(#ffd483, #c58f28, #f6e4c1, #e4a837, #ebd6ae, #c58f2a, #ffd483);
+$poison: conic-gradient(#611380, #4a1f5c, #815892, #5e2775, #b385c5, #aa55cc, #611380);
+$ground: conic-gradient(#bfac22, #4d492e, #969270, #675b00, #beb25b, #e9d85d, #bfac22);
+$rock: conic-gradient(#474026, #807a64, #3d392b, #aa9c66, #635c42, #aa9b64, #474026);
+$bug: conic-gradient(#bddd6e, #576c23, #cbff4c, #7da124, #87a145, #97b350, #bddd6e);
+$ghost: conic-gradient(#8e55a4, #52325f, #410853, #67606a, #664075, #636363, #8e55a4);
+$steel: conic-gradient(#454545, #a1a1a1, #454545, #7e7575, #454545, #cec5c5, #454545);
+$grass: conic-gradient(#3e9709, #79d741, #6db840, #46b106, #3e9709, #92d76a, #3e9709);
+$ice: conic-gradient(#1995a1, #47d4e2, #1995a1, #64b4bc, #1995a1, #8ec6cc, #1995a1);
+$dragon: conic-gradient(#8a55fd, #e6daff, #514a5f, #8a55fd, #554970, #f4f4f4, #8a55fd);
+$dark: conic-gradient(#2d221c, #535353, #3d3d3d, #2d221c, #67625f, #a89185, #2d221c);
+$fairy: conic-gradient(#f87ea7, #e9c5d1, #b3315d, #f87ea7, #c73466, #dbdbdb, #f87ea7);
+
+
+.card-container{
+  background: rgb(221, 193, 0);
+  margin: 8px;
+  width: 24%;
+  height: 80vh;
+  display: flex;
+  border-radius: 8px;
+}
+.card-inner{
+    background-image: $fairy;
+    margin: 16px;
+    align-self: center;
+    width: -moz-fit-content;
+    width: 46vh;
+    height: 75vh;
+}
+
+.card-name_hp_stat{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 18px;
+  height: 12%;
+  position: relative;
+}
+.poke-type{
+  display: flex;
+  position: relative;
+  top: -34px;
+  padding: 0 18px;
+}
+
+.img-outer{
+    background-image: linear-gradient(to right, #c2d321, #dfeb9b, #d9d635);
+    width: 87.5%;
+    position: relative;
+    margin: 0 18px;
+    margin: 0 18px;
+    top: -47px;
+    height: 40%;
+    box-shadow: 1px 2px 10px #a89393;
+}
+
+.img-inner{
+  text-align: center;
+background-image: radial-gradient(circle, rgb(176, 176, 231), rgb(55, 118, 233),rgb(0, 38, 255) );
+  position: relative;
+  margin: 2.5%;
+  width: 38vh;
+  height: 27.8vh;
+  top: 3.5%;
+  border-radius: 2px;
+}
+
+.poke-stat{
+  background-image: linear-gradient(to right, #c1d030, #dfeb9b, #fcf835);
+  display: flex;
+  justify-content: space-evenly;
+  height: 24px;
+  width: 80%;
+  top: -40px;
+  position: relative;
+  margin-left: 28px;
+  line-height: 2px;
+  border-radius: 16px;
+  p{
+    font-size: 10px;
+    padding-left: 8%;
+  }
+}
+
+.poke-stat-p{
+    display: flex;
+    height: 24px;
+    width: 80%;
+    position: relative;
+    margin-left: 26px;
+}
+
+.poke-ability{
+  flex-wrap: wrap;
+  height: 15vh;
+  position: relative;
+  top: -94px;
+  overflow-y: scroll;
+  margin-left: 28px;
+  width: 80%;
+  line-height: 2px;
+  cursor: pointer;
+}
+
+.base-dmg{
+  top: -47px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+.line{
+  position: relative;
+  top: -58px;
+  width: 70%;
+}
+
+.ability-title{
+  position: relative;
+  top: -70px;
+  margin-left: 44px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.poke-ability::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.poke-ability {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
