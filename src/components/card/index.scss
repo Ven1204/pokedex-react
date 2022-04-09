@@ -1,7 +1,7 @@
-$fire: conic-gradient(#ff0000, #7c0909, #ff2c2c, #b80000, #e96e6e, #670d0d, #ff0000);
+$fire: conic-gradient(#ff0000, #7c0909, #9d0000, #f04949, #d00f0f, #670d0d, #ff0000);
 $water: conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff);
 $electric: conic-gradient(#ffc107, #ff9800, #edae51, #ff9800, #e4c494, #be8024, #ffbf00);
-$psychic: conic-gradient(#ea00ff, #ea00ff,#ea00ff, #ea00ff, #ea00ff, #ea00ff, #ea00ff);
+$psychic: conic-gradient(#ea00ff, #44004a, #4c1051, #d66be0, #511e56, #53035a, #ea00ff);
 $flying: conic-gradient(#a1f3ec, #d3fffb, #aed3cf, #14b1a4, #e6eded, #4fc5bb, #a1f3ec);
 $normal: conic-gradient(#fdf3d3, #8b846c, #c5c5c5, #afaa9b, #f6df93, #f2f2f2, #fdf3d3);
 $fighting: conic-gradient(#ffd483, #c58f28, #f6e4c1, #e4a837, #ebd6ae, #c58f2a, #ffd483);
@@ -12,11 +12,29 @@ $bug: conic-gradient(#bddd6e, #576c23, #cbff4c, #7da124, #87a145, #97b350, #bddd
 $ghost: conic-gradient(#8e55a4, #52325f, #410853, #67606a, #664075, #636363, #8e55a4);
 $steel: conic-gradient(#454545, #a1a1a1, #454545, #7e7575, #454545, #cec5c5, #454545);
 $grass: conic-gradient(#3e9709, #79d741, #6db840, #46b106, #3e9709, #92d76a, #3e9709);
-$ice: conic-gradient(#1995a1, #47d4e2, #1995a1, #64b4bc, #1995a1, #8ec6cc, #1995a1);
-$dragon: conic-gradient(#8a55fd, #e6daff, #514a5f, #8a55fd, #554970, #f4f4f4, #8a55fd);
+$ice: conic-gradient(#1995a1, #44eeff, #2b757c, #64b4bc, #367d84, #57aeb8, #1995a1);
+$dragon: conic-gradient(#6c31ed, #cec5ff, #402a6c, #6124e7, #4713bc, #206ca8, #6c31ed);
 $dark: conic-gradient(#2d221c, #535353, #3d3d3d, #2d221c, #67625f, #a89185, #2d221c);
 $fairy: conic-gradient(#f87ea7, #e9c5d1, #b3315d, #f87ea7, #c73466, #dbdbdb, #f87ea7);
 
+$fire-img: radial-gradient(circle, #fbced7, #f63838db, #480904);
+$water-img: radial-gradient(circle, #d3e9fb, #6390e2, #00137e);
+$electric-img: radial-gradient(circle, #f6f0b8, #ffc107, #ad8100);
+$psychic-img: radial-gradient(circle, #eed5f2, #da76eb, #44004f);
+$flying-img: radial-gradient(circle, #b5ebf0, #489290db, #044843);
+$normal-img: radial-gradient(circle, #fdebef, #dbca90, #6e6d6b);
+$fighting-img: radial-gradient(circle, #f4e1bb, #edc881, #be8b2c);
+$poison-img: radial-gradient(circle, #d4a6e7, #aa68c5, #642d7a);
+$ground-img: radial-gradient(circle, #f0decd, #aaa04f, #706515);
+$rock-img: radial-gradient(circle, #f2d3d9, #b6a977, #655f4c);
+$bug-img: radial-gradient(circle, #def6a2, #a4d03a, #547500);
+$ghost-img: radial-gradient(circle, #d7d7d7, #9458a6, #250032);
+$steel-img: radial-gradient(circle, #cac0c0, #807878, #494949);
+$grass-img: radial-gradient(circle, #bbe7a3, #79be50, #286701);
+$ice-img: radial-gradient(circle, #bde1e4, #5faeb6, #075d65);
+$dragon-img: radial-gradient(circle, #cfd6ff, #4d87ce, #432978);
+$dark-img: radial-gradient(circle, #beb2ab, #77706c, #342e2b);
+$fairy-img: radial-gradient(circle, #e5bac8, #de6f94, #a11a47);
 
 .card-container{
   background: rgb(221, 193, 0);
@@ -27,7 +45,7 @@ $fairy: conic-gradient(#f87ea7, #e9c5d1, #b3315d, #f87ea7, #c73466, #dbdbdb, #f8
   border-radius: 8px;
 }
 .card-inner{
-    background-image: $fairy;
+    background-image: $bug;
     margin: 16px;
     align-self: center;
     width: -moz-fit-content;
@@ -63,7 +81,7 @@ $fairy: conic-gradient(#f87ea7, #e9c5d1, #b3315d, #f87ea7, #c73466, #dbdbdb, #f8
 
 .img-inner{
   text-align: center;
-background-image: radial-gradient(circle, rgb(176, 176, 231), rgb(55, 118, 233),rgb(0, 38, 255) );
+background-image: $fairy-img;
   position: relative;
   margin: 2.5%;
   width: 38vh;
@@ -107,6 +125,8 @@ background-image: radial-gradient(circle, rgb(176, 176, 231), rgb(55, 118, 233),
   width: 80%;
   line-height: 2px;
   cursor: pointer;
+  background: linear-gradient(179deg, #ffffff5c, transparent);
+  border-radius: 8px;
 }
 
 .base-dmg{

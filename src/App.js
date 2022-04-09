@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PokemonList from './components/pokemonList/pokemonList';
+import './app.scss';
 
 function App() {
 
   return (
     <div>
-
       <PokemonList />
     </div>
   );
