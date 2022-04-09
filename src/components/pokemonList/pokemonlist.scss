@@ -3,3 +3,31 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.button-next{
+    height: 7vh;
+    width: 16vh;
+    border-radius: 8px;
+    margin: 12px;
+    color: white;
+    background: blue;
+    font-family: fantasy;
+    font-variant-caps: unset;
+    font-size: larger;
+}
+
+.button-prev{
+  height: 7vh;
+  width: 16vh;
+  border-radius: 8px;
+  margin: 12px;
+  color: white;
+  background: blue;
+  font-family: fantasy;
+  font-variant-caps: unset;
+  font-size: larger;
+}
+
+.container-btn{
+  text-align: center;
+}

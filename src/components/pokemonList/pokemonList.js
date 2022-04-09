@@ -62,15 +62,15 @@ function PokemonList() {
       <PokemonSearch/>
       {
       loading? <h1>Loading...</h1> : (
-        <>
-        <button onClick={prev}>Prev</button>
-        <button onClick={next}>Next</button>
+        <div className='container-btn'>
+        <button onClick={prev} className="button-prev">Prev</button>
+        <button onClick={next} className="button-next">Next</button>
           <div className='container-pokemon_cards'>
             {pokemonData.map((pokemon, i) => {
               return <Card key={i} pokemon={pokemon} />
             })}
           </div>
-        </>
+        </div>
         )
       }
     </div>

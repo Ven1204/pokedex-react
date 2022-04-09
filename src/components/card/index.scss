@@ -43,6 +43,12 @@ $fairy-img: radial-gradient(circle, #e5bac8, #de6f94, #a11a47);
   height: 80vh;
   display: flex;
   border-radius: 8px;
+  box-shadow:
+    1px 1px 3px #c8c9de,
+    1px -1px 3px #c8c9de47,
+    -1px 2px 4px #c8c9de47,
+    -1px 2px 3px #c8c9de47
+  ;
 }
 .card-inner{
     background-image: $bug;
@@ -103,7 +109,7 @@ background-image: $fairy-img;
   border-radius: 16px;
   p{
     font-size: 10px;
-    padding-left: 8%;
+    padding-left: 7%;
   }
 }
 
@@ -127,6 +133,7 @@ background-image: $fairy-img;
   cursor: pointer;
   background: linear-gradient(179deg, #ffffff5c, transparent);
   border-radius: 8px;
+  text-align: left;
 }
 
 .base-dmg{
@@ -134,6 +141,7 @@ background-image: $fairy-img;
   position: relative;
   align-items: center;
   text-align: center;
+  margin: 0 26%;
 }
 .line{
   position: relative;
