@@ -13,6 +13,7 @@ function PokemonList() {
   const [prevUrl, setPrevUrl] = useState("");
   const [loading, setLoading] = useState(true);
   const initialUrl = 'https://pokeapi.co/api/v2/pokemon/';
+  const [hideInitialList, setHideInitialList] = useState(true);
 
   useEffect(() => {
     // pokemons();
@@ -26,6 +27,17 @@ function PokemonList() {
     }
     fetchData();
   }, [])
+
+  const home = async () => {
+      if(!prevUrl) return;
+    setLoading(true);
+    let data = await getAllPokemon(initialUrl);
+    await loadingPokemon(data.results)
+    setNextUrl(data.next);
+    setPrevUrl(data.previous);
+    setLoading(false);
+    setHideInitialList(true);
+  }
 
   const next = async () => {
     setLoading(true);
@@ -51,16 +63,28 @@ function PokemonList() {
       let pokemonRecord = await getPokemon(pokemon.url);
       return pokemonRecord
     }))
-
     setPokemonData(_pokemonData)
     //  console.log(_pokemonData)
   }
 
+  // const hide = () => {
+  //   setHideInitialList(false);
+  // }
+
 
   return(
     <div>
-      <PokemonSearch/>
+      <h1 onClick={home}>Pokemon</h1>
+
+      <div >
+        <PokemonSearch
+          placeholder={"Search Pokemon..."}
+          pokemon={pokemonData}
+        />
+      </div>
+
       {
+      hideInitialList?
       loading? <h1>Loading...</h1> : (
         <div className='container-btn'>
         <button onClick={prev} className="button-prev">Prev</button>
@@ -72,7 +96,7 @@ function PokemonList() {
           </div>
         </div>
         )
-      }
+      : null}
     </div>
   );
 }

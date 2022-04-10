@@ -3,8 +3,8 @@ import './index.scss';
 
 
 function Card({ pokemon }) {
-  const [color, setColor] = useState("");
 
+const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff)"
   // switch(color){
   //   case (pokemon.map(type =>{type.type[0].name === 'fire'})):
   //     style = {$fire}
@@ -13,7 +13,7 @@ function Card({ pokemon }) {
 
   return (
     <div className='card-container'>
-      <div className="card-inner">
+      <div className="card-inner" style={{background:`${water}`}}>
         <div className='card-name_hp_stat'>
           <h2>{pokemon.name}</h2>
           <h3>HP:{pokemon.base_experience}</h3>
