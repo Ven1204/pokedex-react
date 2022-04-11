@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import {getAllPokemon} from '../../services/pokemon';
-import {getPokemon} from '../../services/pokemon';
+import { getAllPokemon } from '../../services/pokemon';
+import { getPokemon, getPokemonSearch } from '../../services/pokemon';
 import Card from '../card/cards';
 import './pokemonlist.scss';
 import PokemonSearch from '../pokemonSearch/pokemonSearch';
 
 function PokemonList() {
   const [pokemonData, setPokemonData] = useState([]);
+  const [pokemonSearchData, setPokemonSearchData] = useState([]);
   const [nextUrl, setNextUrl] = useState("");
   const [prevUrl, setPrevUrl] = useState("");
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ function PokemonList() {
       setNextUrl(response.next);
       setPrevUrl(response.previous);
       await loadingPokemon(response.results);
+      await pokemonSearch(response.results);
       setLoading(false);
     }
     fetchData();
@@ -63,29 +65,41 @@ function PokemonList() {
       let pokemonRecord = await getPokemon(pokemon.url);
       return pokemonRecord
     }))
+
     setPokemonData(_pokemonData)
     //  console.log(_pokemonData)
   }
 
-  // const hide = () => {
-  //   setHideInitialList(false);
-  // }
+  const pokemonSearch = async (data) =>{
+    let _pokemonSearchData = await Promise.all(data.map(async pokemon => {
+      let pokeSearchArr = await getPokemonSearch(pokemon.url);
+      return pokeSearchArr
+    }))
+
+    setPokemonSearchData(_pokemonSearchData);
+    // console.log(_pokemonSearchData)
+  }
+
+  const hide = () => {
+    setHideInitialList(false);
+  }
 
 
   return(
     <div>
       <h1 onClick={home}>Pokemon</h1>
 
-      <div >
+      {/* <div>
         <PokemonSearch
           placeholder={"Search Pokemon..."}
-          pokemon={pokemonData}
+          pokemon={pokemonSearchData}
+          hide={hideInitialList}
         />
-      </div>
+      </div> */}
 
       {
-      hideInitialList?
       loading? <h1>Loading...</h1> : (
+        <>
         <div className='container-btn'>
         <button onClick={prev} className="button-prev">Prev</button>
         <button onClick={next} className="button-next">Next</button>
@@ -95,8 +109,13 @@ function PokemonList() {
             })}
           </div>
         </div>
+        <div className='container-btn'>
+          <button onClick={prev} className="button-prev">Prev</button>
+          <button onClick={next} className="button-next">Next</button>
+        </div>
+      </>
         )
-      : null}
+      }
     </div>
   );
 }

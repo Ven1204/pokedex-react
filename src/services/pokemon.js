@@ -18,3 +18,15 @@ export async function getPokemon(url) {
     })
   })
 }
+
+
+export async function getPokemonSearch(url) {
+  return new Promise((resolve, reject) => {
+    fetch(url)
+    // fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      resolve(data);
+    })
+  })
+}

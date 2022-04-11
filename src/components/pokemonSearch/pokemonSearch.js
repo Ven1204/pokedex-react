@@ -1,11 +1,48 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import './pokemonSearch.scss';
 import Card from '../card/cards';
 
-function PokemonSearch({placeholder, pokemon}) {
+function PokemonSearch({placeholder, pokemon, hide}) {
   const [pokemonName, setPokemonName] = useState(pokemon);
+
+  const filterSearch  = (event) => {
+    event.preventDefault();
+    const searchWord = event.target.value
+    const x = pokemon.map(pokemon =>{
+      return pokemon
+      // console.log(pokemon)
+    })
+
+    const searchFilter = x.filter((pokemon) => {
+      return pokemon.name.toLowerCase().includes(searchWord.toLowerCase());
+    })
+    setPokemonName(searchFilter)
+  }
+
+
+  return (
+    <div>
+      <div>
+        <input
+          type="text"
+          // onChange={(event) => {setPokemonName(event.target.value)}}
+          onChange={filterSearch}
+          placeholder={placeholder}
+          />
+      </div>
+        <div>
+          {pokemonName.map((pokemon, i) =>{
+            return <Card key={i} pokemon={pokemon} />
+          })}
+        </div>
+    </div>
+  )
+}
+
+export default PokemonSearch;
+
+
 
   // const [pokemon, setPokemon] = useState({
   //   name:"",
@@ -31,39 +68,3 @@ function PokemonSearch({placeholder, pokemon}) {
   //     })
   //   })
   // }
-  const filterSearch  = (event) => {
-    event.preventDefault();
-    const searchWord = event.target.value
-    const searchFilter = pokemon.filter((pokemon) =>{
-      return (pokemon.name.toLowerCase().includes(searchWord.toLowerCase()));
-    })
-    setPokemonName(searchFilter)
-  }
-
-  // const hideCards = () => {
-  //   setPokemonHide(hide)
-  // }
-
-  return (
-    <div>
-      <div>
-        <input
-          type="text"
-          // onChange={(event) => {setPokemonName(event.target.value)}}
-          onChange={filterSearch}
-          placeholder={placeholder}
-          />
-      </div>
-      {pokemonName && (
-        <div>
-          {pokemonName.map((pokemon, i) =>{
-            return <Card key={i} pokemon={pokemon} />
-          })}
-        </div>
-      )}
-
-    </div>
-  )
-}
-
-export default PokemonSearch;

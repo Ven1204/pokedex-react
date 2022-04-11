@@ -14,8 +14,9 @@ $steel: conic-gradient(#454545, #a1a1a1, #454545, #7e7575, #454545, #cec5c5, #45
 $grass: conic-gradient(#3e9709, #79d741, #6db840, #46b106, #3e9709, #92d76a, #3e9709);
 $ice: conic-gradient(#1995a1, #44eeff, #2b757c, #64b4bc, #367d84, #57aeb8, #1995a1);
 $dragon: conic-gradient(#6c31ed, #cec5ff, #402a6c, #6124e7, #4713bc, #206ca8, #6c31ed);
-$dark: conic-gradient(#2d221c, #535353, #3d3d3d, #2d221c, #67625f, #a89185, #2d221c);
+$dark: conic-gradient(#4d4d4d, #535353, #3d3d3d, #797877, #67625f, #a89185, #4d4d4d);
 $fairy: conic-gradient(#f87ea7, #e9c5d1, #b3315d, #f87ea7, #c73466, #dbdbdb, #f87ea7);
+$default: conic-gradient(#0027ff, #0a74ca, #010c4a, #00137e, #136f99, #34bdfb, #2196f3, #1e84d5, #4596ba, #5293b1, #9ba8ed, #011896, #0891ff, #0027ff);
 
 $fire-img: radial-gradient(circle, #fbced7, #f63838db, #480904);
 $water-img: radial-gradient(circle, #d3e9fb, #6390e2, #00137e);
@@ -35,6 +36,7 @@ $ice-img: radial-gradient(circle, #bde1e4, #5faeb6, #075d65);
 $dragon-img: radial-gradient(circle, #cfd6ff, #4d87ce, #432978);
 $dark-img: radial-gradient(circle, #beb2ab, #77706c, #342e2b);
 $fairy-img: radial-gradient(circle, #e5bac8, #de6f94, #a11a47);
+$default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a81346);
 
 .card-container{
   background: rgb(221, 193, 0);
@@ -51,11 +53,11 @@ $fairy-img: radial-gradient(circle, #e5bac8, #de6f94, #a11a47);
   ;
 }
 .card-inner{
-    background-image: $bug;
+    background-image: $default;
     margin: 16px;
     align-self: center;
     width: -moz-fit-content;
-    width: 46vh;
+    width: 47vh;
     height: 75vh;
 }
 
@@ -87,7 +89,7 @@ $fairy-img: radial-gradient(circle, #e5bac8, #de6f94, #a11a47);
 
 .img-inner{
   text-align: center;
-background-image: $fairy-img;
+background-image: $default-img;
   position: relative;
   margin: 2.5%;
   width: 38vh;

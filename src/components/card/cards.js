@@ -3,17 +3,22 @@ import './index.scss';
 
 
 function Card({ pokemon }) {
+// console.log(pokemon)
+// const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff)"
 
-const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff)"
-  // switch(color){
-  //   case (pokemon.map(type =>{type.type[0].name === 'fire'})):
-  //     style = {$fire}
+// const cardInner = `${pokemon.type.type[0].name}`
+//   switch (cardInner) {
+//     case 'water':
+//       return water
+//       break;
 
-  // }
+//     default:
+//       break;
+//   }
 
   return (
     <div className='card-container'>
-      <div className="card-inner" style={{background:`${water}`}}>
+      <div className="card-inner">
         <div className='card-name_hp_stat'>
           <h2>{pokemon.name}</h2>
           <h3>HP:{pokemon.base_experience}</h3>
@@ -21,7 +26,7 @@ const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952
 
         <div className="poke-type">
         {pokemon.types.map(type => {
-            return (<p> |{type.type.name}|</p>)
+            return (<p> |{(type.type.name).toUpperCase()}|</p>)
           })}
         </div>
 
@@ -49,7 +54,7 @@ const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952
         </div>
 
         <div className='poke-ability'>
-          {pokemon.moves.map(move =>{
+          {pokemon.moves.map(move => {
             return (
               <ul>
                 <li>{move.move.name}</li>
