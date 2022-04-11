@@ -169,3 +169,102 @@ background-image: $default-img;
   scrollbar-width: none;
   /* Firefox */
 }
+
+
+// @media screen and (max-width: 2660px) {
+//   .card-container{
+//     width: 50.8vh;
+//     padding-left: 8px;
+//   }
+//   .img-outer{
+//     margin: 0px 36px;
+//     width: 85.5%;
+//   }
+//   .card-name_hp_stat{
+//     padding: 0 36px;
+//   }
+//   .poke-type{
+//     padding: 0 36px;
+//   }
+//   .poke-stat{
+//     width: 71%;
+//     margin-left: 73px;
+//     p{
+//       padding-left: 42px;
+//     }
+//     .line{
+//       align-self: center;
+//     }
+//   }
+//   h4{
+//     padding-left: 18px;
+//   }
+//   .poke-ability{
+//     margin-left: 72px;
+//     width: 72%;
+//     top: -84px;
+//   }
+// }
+
+// @media screen and (max-width: 1330px) {
+//   .card-container {
+//     width: 50.8vh;
+//     padding-left: 8px;
+//   }
+//   .card-inner{
+//     margin: 5px;
+//     width: 47.5vh;
+//   }
+//   .img-outer {
+//     margin: 0px 20px;
+//     width: 85.5%;
+//     top: -32px;
+//   }
+//   .img-inner{
+//     width: 38.5vh;
+//   }
+
+//   .card-name_hp_stat {
+//     padding: 0 20px;
+//   }
+
+//   .poke-type {
+//     padding: 0 20px;
+//     top: -24px;
+//     }
+//   }
+
+//   .poke-stat {
+//     margin: 20px;
+//     width: 86%;
+
+//     p {
+//       padding-left: 10px;
+//     }
+
+//     .line {
+//       align-self: center;
+//     }
+//   }
+
+//   h4 {
+//     width: 100%;
+//     font-size: 12px;
+//     padding: 0;
+//   }
+
+//   .poke-ability {
+//     margin-left: 35px;
+//     ul{
+//       font-size: 10px;
+//     }
+//   }
+//   h2{
+//     font-size: 18px;
+//   }
+//   h3{
+//     font-size: 12px;
+//   }
+//   p{
+//     font-size: 10px;
+//   }
