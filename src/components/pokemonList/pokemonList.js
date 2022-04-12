@@ -2,10 +2,11 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getAllPokemon } from '../../services/pokemon';
-import { getPokemon, getPokemonSearch } from '../../services/pokemon';
+import { getPokemon, getPokemonSearch, image} from '../../services/pokemon';
 import Card from '../card/cards';
 import './pokemonlist.scss';
 import PokemonSearch from '../pokemonSearch/pokemonSearch';
+
 
 function PokemonList() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -86,9 +87,26 @@ function PokemonList() {
 
 
   return(
-    <div>
-      <h1 onClick={home}>Pokemon</h1>
+    <div className='wallpaper' style={image}>
 
+      <div className='img-header' >
+        <div className='image-mewtoo'>
+          <img src="https://media4.giphy.com/media/Jq81o9UbQeLcm408jW/giphy.gif?cid=790b7611bcf16c265c924f63df2e6994e1b74501d4218d1f&rid=giphy.gif&ct=s" alt="" />
+        </div>
+        <div className='image-poke-logo'>
+          <img  onClick={home} src="https://c4.wallpaperflare.com/wallpaper/827/674/341/pokemon-wallpaper-preview.jpg" alt="" />
+        </div>
+      </div>
+
+        <div className='image-qwe'>
+          <img  src="https://media2.giphy.com/media/D3IozBXyAvMIx5Ck0E/giphy.gif?cid=790b7611ce7047d445926eeec910a6ac0c51f4d3c7f91278&rid=giphy.gif&ct=s" alt="" />
+        </div>
+        <div className='image-wer'>
+          <img className='a' src="https://media1.giphy.com/media/kW2ldfi018BbN3DwcU/giphy.gif?cid=790b76111a7dab47bbdaf2136ecff2156bbad80f6b3d249a&rid=giphy.gif&ct=s" alt="" />
+        </div>
+        <div className='image-ert'>
+          <img className='b' src="https://media3.giphy.com/media/5ld56qTwPjp7TZc9Oa/giphy.gif?cid=ecf05e47npcfewvfhc003rvl3e7rr82xesnvsnqoqtmlqvb3&rid=giphy.gif&ct=s" alt="" />
+        </div>
       {/* <div>
         <PokemonSearch
           placeholder={"Search Pokemon..."}
@@ -104,6 +122,19 @@ function PokemonList() {
         <button onClick={prev} className="button-prev">Prev</button>
         <button onClick={next} className="button-next">Next</button>
           <div className='container-pokemon_cards'>
+
+            <div className='pika'>
+              <div className='image-asd'>
+                <img className='p1' src="https://media2.giphy.com/media/fSgA9rYHFdPcR3YZPY/giphy.gif?cid=ecf05e472xsba5p6ax24mtag4n3aeap0p9qnfspvwbxcnth2&rid=giphy.gif&ct=s" alt="" />
+              </div>
+              <div className='image-asd2'>
+                <img className='p2' src="https://media2.giphy.com/media/z1zPIipBt7hNJyDaHe/giphy.gif?cid=790b761178009170c09afc3412c2ae486785247d32fd759f&rid=giphy.gif&ct=s" alt="" />
+              </div>
+              <div className='image-asd3'>
+                <img className='p3' src="https://media2.giphy.com/media/z1zPIipBt7hNJyDaHe/giphy.gif?cid=790b761178009170c09afc3412c2ae486785247d32fd759f&rid=giphy.gif&ct=s" alt="" />
+              </div>
+            </div>
+
             {pokemonData.map((pokemon, i) => {
               return <Card key={i} pokemon={pokemon} />
             })}

@@ -30,3 +30,10 @@ export async function getPokemonSearch(url) {
     })
   })
 }
+
+
+export const image = {
+  backgroundImage: "url(https://wallpapercave.com/wp/wp6376250.jpg)",
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+}

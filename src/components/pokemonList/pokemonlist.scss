@@ -31,3 +31,84 @@
 .container-btn{
   text-align: center;
 }
+
+.img-header{
+  text-align: center;
+  background: #000;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom-color: yellow;
+  border-bottom-style: groove;
+
+}
+
+.wallpaper{
+  height: 101vh;
+}
+
+.image-poke-logo{
+  margin-left: 37pc;
+  cursor: pointer;
+}
+.image-mewtoo{
+  position: absolute;
+  left: 69vh;
+}
+.pika{
+  position: sticky;
+  top: 27vh;
+  bottom: 0;
+  .image-asd {
+    position: absolute;
+    left: 63pc;
+    top: 16pc;
+  }
+
+  .image-asd2 {
+    position: absolute;
+    left: 61pc;
+    top: 21pc;
+
+    .p2 {
+      width: 16vh;
+    }
+  }
+
+  .image-asd3 {
+    position: absolute;
+    left: 66pc;
+    top: 21pc;
+
+    .p3 {
+      width: 18vh;
+    }
+  }
+}
+
+
+.image-qwe {
+  position: absolute;
+  right: 37px;
+  right: 70vh;
+  top: -6px;
+}
+
+.image-wer {
+  position: absolute;
+  left: 58vh;
+  top: 5vh;
+  .a{
+    height: 20vh;
+    width: 16vh;
+  }
+}
+
+.image-ert {
+  position: absolute;
+  right: 60vh;
+  top: 30px;
+  .b{
+    height: 20vh;
+    width: 16vh;
+  }
+}
