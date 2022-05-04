@@ -41,10 +41,12 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
 .card-container{
   background: rgb(221, 193, 0);
   margin: 8px;
-  width: 24%;
+  width: 60vw;
   height: 80vh;
   display: flex;
   border-radius: 8px;
+  position: relative;
+  // left: 50%;
   box-shadow:
     1px 1px 3px #c8c9de,
     1px -1px 3px #c8c9de47,
@@ -56,9 +58,8 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
     background-image: $default;
     margin: 16px;
     align-self: center;
-    width: -moz-fit-content;
-    width: 47vh;
-    height: 75vh;
+    width: 90%;
+    height: 93%;
 }
 
 .card-name_hp_stat{
@@ -102,7 +103,7 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
   background-image: linear-gradient(to right, #c1d030, #dfeb9b, #fcf835);
   display: flex;
   justify-content: space-evenly;
-  height: 24px;
+  height: 5%;
   width: 80%;
   top: -40px;
   position: relative;
@@ -139,11 +140,12 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
 }
 
 .base-dmg{
-  top: -47px;
+  top: -40%;
   position: relative;
   align-items: center;
   text-align: center;
-  margin: 0 26%;
+  // margin: 0 26%;
+  left: 25%;
 }
 .line{
   position: relative;

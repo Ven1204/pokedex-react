@@ -1,7 +1,11 @@
 .container-pokemon_cards{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  position: absolute;
+  height: 100%;
+  background: balck;
+  top: 14vh;
+  background: blue;
+  width: 100%;
+  height: auto;
 }
 
 .button-next{
@@ -30,44 +34,58 @@
 
 .container-btn{
   text-align: center;
+  position: absolute;
+  top: 20vh;
+  width: 100%;
 }
 
 .img-header{
-  text-align: center;
-  background: #000;
-  display: flex;
-  justify-content: flex-start;
-  border-bottom-color: yellow;
-  border-bottom-style: groove;
+  // width: 100vw;
+  // text-align: center;
+  // background: #000;
+  // display: flex;
+  // justify-content: flex-start;
+  // border-bottom-color: yellow;
+  // border-bottom-style: groove;
 
 }
 
 .wallpaper{
-  height: 101vh;
+  // height: 101vh;
 }
 
 .image-poke-logo{
-  margin-left: 37pc;
+  position: fixed;
+  top: 0;
+  align-self: center;
+  width: 100%;
+  height: 16vh;
+  background: red;
+  text-align: center;
   cursor: pointer;
 }
 .image-mewtoo{
-  position: absolute;
-  left: 69vh;
+  position: fixed;
+  z-index: 2;
+  right: 0;
 }
 .pika{
-  position: sticky;
-  top: 27vh;
-  bottom: 0;
+    // background: wheat;
+    // height: 30vh;
+    // width: 30vw;
+
   .image-asd {
-    position: absolute;
-    left: 63pc;
-    top: 16pc;
+    position: fixed;
+    top: 68vh;
+    z-index: 2;
+    right: 0;
   }
 
   .image-asd2 {
-    position: absolute;
-    left: 61pc;
-    top: 21pc;
+    position: fixed;
+    top: 82vh;
+    z-index: 2;
+    right: 4vh;
 
     .p2 {
       width: 16vh;
@@ -75,28 +93,28 @@
   }
 
   .image-asd3 {
-    position: absolute;
-    left: 66pc;
-    top: 21pc;
+    position: fixed;
+    top: 83vh;
+    z-index: 2;
+    right: 18vh;
 
     .p3 {
-      width: 18vh;
+      width: 14vh;
     }
   }
 }
 
 
 .image-qwe {
-  position: absolute;
-  right: 37px;
-  right: 70vh;
-  top: -6px;
+  position: fixed;
+  left: 0;
 }
 
 .image-wer {
-  position: absolute;
-  left: 58vh;
+  position: fixed;
   top: 5vh;
+  right: 15vh;
+
   .a{
     height: 20vh;
     width: 16vh;
@@ -104,9 +122,9 @@
 }
 
 .image-ert {
-  position: absolute;
-  right: 60vh;
-  top: 30px;
+  top: 4vh;
+  position: fixed;
+  left: 17vh;
   .b{
     height: 20vh;
     width: 16vh;
