@@ -39,14 +39,12 @@ $fairy-img: radial-gradient(circle, #e5bac8, #de6f94, #a11a47);
 $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a81346);
 
 .card-container{
-  background: rgb(221, 193, 0);
-  margin: 8px;
+  background: #ddc100;
+  margin: 2vh 16vh 4vh 16vh;
+  padding: 0.5vh;
   width: 60vw;
   height: 80vh;
-  display: flex;
   border-radius: 8px;
-  position: relative;
-  // left: 50%;
   box-shadow:
     1px 1px 3px #c8c9de,
     1px -1px 3px #c8c9de47,
@@ -172,6 +170,21 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
   /* Firefox */
 }
 
+@media screen and (min-width:500px) {
+  .card-container {
+    background: #ddc100;
+    margin: 2vh 16vh 4vh 16vh;
+    padding: 0.5vh;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 8px;
+    box-shadow:
+      1px 1px 3px #c8c9de,
+      1px -1px 3px #c8c9de47,
+      -1px 2px 4px #c8c9de47,
+      -1px 2px 3px #c8c9de47;
+  }
+}
 
 // @media screen and (max-width: 2660px) {
 //   .card-container{
