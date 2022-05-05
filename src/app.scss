@@ -39,6 +39,8 @@ h4, span{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    position: relative;
+    top: 6vh;
   }
   .card-outer-container{
     margin: 2vh 0 4vh 0;
@@ -46,4 +48,19 @@ h4, span{
   .card-inner{
     top: 0;
   }
+
+  .image-poke-logo {
+    img {
+      width: 28vh;
+    }
+  }
+
+  .pika{
+    display: block;
+  }
+
+  .image-mewtoo, .image-qwe, .image-wer, .image-ert{
+    display: none;
+  }
+
 }
