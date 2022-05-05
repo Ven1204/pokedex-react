@@ -38,12 +38,17 @@ $dark-img: radial-gradient(circle, #beb2ab, #77706c, #342e2b);
 $fairy-img: radial-gradient(circle, #e5bac8, #de6f94, #a11a47);
 $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a81346);
 
-.card-container{
+// .container-poke-cards{
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+// }
+
+.card-outer-container{
   background: #ddc100;
-  margin: 2vh 16vh 4vh 16vh;
-  padding: 0.5vh;
-  width: 60vw;
-  height: 80vh;
+  height: 70vh;
+  width: 50vh;
+  margin: 0 0 0 16vh;
   border-radius: 8px;
   box-shadow:
     1px 1px 3px #c8c9de,
@@ -52,109 +57,116 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
     -1px 2px 3px #c8c9de47
   ;
 }
+
 .card-inner{
-    background-image: $default;
-    margin: 16px;
-    align-self: center;
-    width: 90%;
-    height: 93%;
+  background: $default;
+  height: 66vh;
+  width: 46vh;
+  margin: 2vh;
+  top: 2vh;
+  position: relative;
 }
 
 .card-name_hp_stat{
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 0 18px;
-  height: 12%;
-  position: relative;
-}
-.poke-type{
-  display: flex;
-  position: relative;
-  top: -34px;
-  padding: 0 18px;
-}
-
-.img-outer{
-    background-image: linear-gradient(to right, #c2d321, #dfeb9b, #d9d635);
-    width: 86%;
-    position: relative;
-    margin: 0 18px;
-    margin: 0 18px;
-    top: -47px;
-    height: 40%;
-    box-shadow: 1px 2px 10px #a89393;
-}
-
-.img-inner{
-  text-align: center;
-  background-image: $default-img;
-  position: relative;
-  margin: 2.5%;
-  width: 38vh;
-  height: 27.8vh;
-  top: 3.5%;
-  border-radius: 2px;
-}
-
-.poke-stat{
-  background-image: linear-gradient(to right, #c1d030, #dfeb9b, #fcf835);
-  display: flex;
-  justify-content: space-evenly;
-  height: 5%;
-  width: 80%;
-  top: -40px;
-  position: relative;
-  margin-left: 28px;
-  line-height: 2px;
-  border-radius: 16px;
-  p{
-    font-size: 10px;
-    padding-left: 7%;
+  padding: 0 4vh 0 4vh;
+  margin: 0 0 2vh 0;
+  h2{
+    margin: 0 0 2vh 0;
   }
 }
 
-.poke-stat-p{
-    display: flex;
-    height: 24px;
-    width: 80%;
-    position: relative;
-    margin-left: 26px;
+.poke-type{
+  display: flex;
+  top: -77vh;
+  position: relative;
+  left: 4vh;
+  p{
+    font-size: 12px;
+  }
 }
 
-.poke-ability{
-  flex-wrap: wrap;
-  height: 15vh;
+.img-outer{
+  background: linear-gradient(to right, #c2d321, #dfeb9b, #d9d635);
+  width: 38vh;
+  height: 26vh;
+  top: -7vh;
   position: relative;
-  top: -94px;
-  overflow-y: scroll;
-  margin-left: 28px;
-  width: 80%;
-  line-height: 2px;
-  cursor: pointer;
-  background: linear-gradient(179deg, #ffffff5c, transparent);
-  border-radius: 8px;
-  text-align: left;
+  margin: 0 4vh 0 4vh;
+}
+
+.img-inner{
+  background: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a81346);
+  width: 35vh;
+  height: 23vh;
+  position: relative;
+  top: 1.5vh;
+  left: 1.5vh;
+  text-align: center;
+  img{
+    height: 100%;
+  }
+}
+
+.poke-stat{
+  background: linear-gradient(to right, #c1d030, #dfeb9b, #fcf835);
+  display: flex;
+  height: 4vh;
+  width: 34vh;
+  position: relative;
+  top: -5vh;
+  left: 4vh;
+  border-radius: 18px;
+  text-align: center;
+  line-height: 0.5;
+  padding: 0 2vh 0 2vh;
+  justify-content: space-between;
+
+  p{
+    font-size: 10px;
+  }
+
+}
+
+.poke-stat-p{
+  display: flex;
+  p{
+    padding: 0 0 0 2vh;
+  }
 }
 
 .base-dmg{
-  top: -40%;
-  position: relative;
+  display: flex;
   align-items: center;
-  text-align: center;
-  // margin: 0 26%;
-  left: 25%;
+  top: -7vh;
+  position: relative;
+  justify-content: space-around;
 }
+
 .line{
   position: relative;
-  top: -58px;
-  width: 70%;
+  top: -11vh;
+  width: 34vh;
 }
 
 .ability-title{
   position: relative;
-  top: -70px;
-  margin-left: 44px;
+  top: -14vh;
+  left: 6vh;
+}
+
+.poke-ability {
+  position: relative;
+  top: -17vh;
+  height: 14vh;
+  width: 34vh;
+  left: 6vh;
+  background: linear-gradient(179deg, #ffffff5c, transparent);
+  overflow: scroll;
+  line-height: 0.3;
+
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -170,21 +182,6 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
   /* Firefox */
 }
 
-@media screen and (min-width:500px) {
-  .card-container {
-    background: #ddc100;
-    margin: 2vh 16vh 4vh 16vh;
-    padding: 0.5vh;
-    width: 60vw;
-    height: 80vh;
-    border-radius: 8px;
-    box-shadow:
-      1px 1px 3px #c8c9de,
-      1px -1px 3px #c8c9de47,
-      -1px 2px 4px #c8c9de47,
-      -1px 2px 3px #c8c9de47;
-  }
-}
 
 // @media screen and (max-width: 2660px) {
 //   .card-container{
