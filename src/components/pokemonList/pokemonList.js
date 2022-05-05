@@ -126,7 +126,7 @@ function PokemonList() {
           </div>
 
           {/* button-container-top */}
-          <div className='container-btn'>
+          <div className='container-btn-top'>
             <button onClick={prev} className="button-prev">Prev</button>
             <button onClick={next} className="button-next">Next</button>
           </div>
@@ -148,7 +148,7 @@ function PokemonList() {
           </div>
 
           {/* button-container-bottom */}
-          <div className='container-btn'>
+          <div className='container-btn-bot'>
             <button onClick={prev} className="button-prev">Prev</button>
             <button onClick={next} className="button-next">Next</button>
           </div>
