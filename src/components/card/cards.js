@@ -1,8 +1,16 @@
 import React, {useState} from 'react';
 
 function Card({ pokemon }) {
-// console.log(pokemon)
-// const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff)"
+  // const [type, setType] = useState("");
+
+  // const fire = pokemon.types.map(type =>{
+  //   if(type.type.name === 'fire'){
+  //     console.log(type.type.name)
+  //   }
+  // })
+
+
+const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff)"
 
 // const cardInner = `${pokemon.type.type[0].name}`
 //   switch (cardInner) {
@@ -15,11 +23,12 @@ function Card({ pokemon }) {
 //   }
 
   return (
-    // <div className="container-poke-cards">
       <div className='card-outer-container'>
+        {/* if statement to check the type  */}
+
         <div className="card-inner">
           <div className='card-name_hp_stat'>
-            <h2>{pokemon.name}</h2>
+            <h2>{(pokemon.name).charAt(0).toUpperCase()+ pokemon.name.slice(1)}</h2>
             <h3>HP:{pokemon.base_experience}</h3>
           </div>
 
@@ -30,6 +39,8 @@ function Card({ pokemon }) {
           </div>
 
           <div className='img-outer'>
+            {/* if statement to check the type  */}
+
             <div className='img-inner'>
               <img src={pokemon.sprites.front_default} alt="" />
             </div>
@@ -63,7 +74,6 @@ function Card({ pokemon }) {
           </div>
         </div>
       </div>
-    // </div>
   )
 }
 export default Card;
