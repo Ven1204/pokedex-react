@@ -55,19 +55,19 @@
   }
 }
 
-.img-header{
-  // width: 100vw;
-  // text-align: center;
-  // background: #000;
-  // display: flex;
-  // justify-content: flex-start;
-  // border-bottom-color: yellow;
-  // border-bottom-style: groove;
-
+.loading{
+  background-color: transparent;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  top: 24vh;
 }
 
 .wallpaper{
   height: auto;
+  // background: linear-gradient(to right, black, rgb(15, 12, 12), rgb(22, 21, 21));
+  background: radial-gradient(circle, rgb(59, 59, 59), black);
 }
 
 .image-poke-logo{

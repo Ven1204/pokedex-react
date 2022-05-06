@@ -38,12 +38,6 @@ $dark-img: radial-gradient(circle, #beb2ab, #77706c, #342e2b);
 $fairy-img: radial-gradient(circle, #e5bac8, #de6f94, #a11a47);
 $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a81346);
 
-// .container-poke-cards{
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: flex-start;
-// }
-
 .card-outer-container{
   background: #ddc100;
   height: 70vh;
@@ -99,11 +93,11 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
 
 .img-inner{
   background: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a81346);
-  width: 35vh;
-  height: 23vh;
+  width: 36vh;
+  height: 24vh;
   position: relative;
-  top: 1.5vh;
-  left: 1.5vh;
+  top: 1vh;
+  left: 1vh;
   text-align: center;
   img{
     height: 100%;

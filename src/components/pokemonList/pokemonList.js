@@ -85,7 +85,7 @@ function PokemonList() {
 
 
   return(
-    <div className='wallpaper' style={image}>
+    <div className='wallpaper' >
 
       {/* header-container */}
       <div className='img-header' >
@@ -116,7 +116,7 @@ function PokemonList() {
       </div>
 
       {
-      loading? <h1>Loading...</h1> : (
+      loading? <div className='loading'><h1>Loading...</h1></div> : (
         <>
           {/* container of cards    */}
           <div className='container-pokemon_cards'>

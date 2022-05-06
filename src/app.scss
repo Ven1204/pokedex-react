@@ -36,13 +36,13 @@ h4, span{
 @media screen and (min-width: 700px) {
   .container-pokemon_cards{
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     flex-wrap: wrap;
     position: relative;
     top: 2vh;
   }
   .card-outer-container{
-    margin: 2vh 0 4vh 0;
+    margin: 2vh 4vh 6vh 4vh;
   }
   .card-inner{
     top: 0;
