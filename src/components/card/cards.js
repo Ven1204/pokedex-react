@@ -3,24 +3,14 @@ import React, {useState} from 'react';
 function Card({ pokemon }) {
   // const [type, setType] = useState("");
 
-  // const fire = pokemon.types.map(type =>{
-  //   if(type.type.name === 'fire'){
-  //     console.log(type.type.name)
-  //   }
-  // })
+  const isFire = pokemon.types.map(type =>{
+    if(type.type.name === 'fire'){
+      console.log(pokemon.name)
+    } else if(type.type.name === 'water'){
+      console.log(pokemon.name)
+    }
+  })
 
-
-const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff)"
-
-// const cardInner = `${pokemon.type.type[0].name}`
-//   switch (cardInner) {
-//     case 'water':
-//       return water
-//       break;
-
-//     default:
-//       break;
-//   }
 
   return (
       <div className='card-outer-container'>
@@ -28,7 +18,7 @@ const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952
 
         <div className="card-inner">
           <div className='card-name_hp_stat'>
-            <h2>{(pokemon.name).charAt(0).toUpperCase()+ pokemon.name.slice(1)}</h2>
+            <h2>{(pokemon.name).charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
             <h3>HP:{pokemon.base_experience}</h3>
           </div>
 
