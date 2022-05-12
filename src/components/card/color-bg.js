@@ -20,8 +20,8 @@ const fairy = "conic-gradient(#f87ea7, #e9c5d1, #b3315d, #f87ea7, #c73466, #dbdb
 
 export default function pokeBgColor(type) {
   switch (type) {
-    case "fire":
-      bgColor = "red";
+    case fire:
+      fire
       break;
     case "Fearless":
       bgColor = "green";
