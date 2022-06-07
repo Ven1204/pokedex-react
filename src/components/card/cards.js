@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import styled from 'styled-components';
+
 
 function Card({ pokemon }) {
   // const [type, setType] = useState("");
@@ -11,12 +13,20 @@ function Card({ pokemon }) {
     }
   })
 
+  const Styledfire = styled.div`
+    background: conic-gradient(#ff0000, #7c0909, #9d0000, #f04949, #d00f0f, #670d0d, #ff0000);
+    height: 66vh;
+    width: 46vh;
+    margin: 2vh;
+    position: relative;
+`;
+
 
   return (
       <div className='card-outer-container'>
         {/* if statement to check the type  */}
-
-        <div className="card-inner">
+<Styledfire>
+        {/* <div className="card-inner"> */}
           <div className='card-name_hp_stat'>
             <h2>{(pokemon.name).charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
             <h3>HP:{pokemon.base_experience}</h3>
@@ -34,6 +44,7 @@ function Card({ pokemon }) {
             <div className='img-inner'>
               <img src={pokemon.sprites.front_default} alt="" />
             </div>
+
           </div>
 
           <div className='poke-stat'>
@@ -62,7 +73,8 @@ function Card({ pokemon }) {
               )
             })}
           </div>
-        </div>
+        {/* </div> */}
+        </Styledfire>
       </div>
   )
 }

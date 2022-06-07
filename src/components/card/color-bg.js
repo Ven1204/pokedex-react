@@ -17,20 +17,15 @@ const dragon = "conic-gradient(#6c31ed, #cec5ff, #402a6c, #6124e7, #4713bc, #206
 const dark = "conic-gradient(#2d221c, #535353, #3d3d3d, #2d221c, #67625f, #a89185, #2d221c)"
 const fairy = "conic-gradient(#f87ea7, #e9c5d1, #b3315d, #f87ea7, #c73466, #dbdbdb, #f87ea7)"
 
+import styled from 'styled-components';
 
-export default function pokeBgColor(type) {
-  switch (type) {
-    case fire:
-      fire
-      break;
-    case "Fearless":
-      bgColor = "green";
-      break;
-    default:
-      bgColor = "orange";
-      break;
-  }
 
-  return bgColor;
-}
-}
+export const styledfire = styled.div`
+  background: fire;
+  width: 36vh;
+  height: 24vh;
+  position: relative;
+  top: 1vh;
+  left: 1vh;
+  text-align: center;
+`;
