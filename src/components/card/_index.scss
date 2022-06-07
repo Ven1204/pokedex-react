@@ -42,7 +42,7 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
   background: #ddc100;
   height: 70vh;
   width: 50vh;
-  margin: 0 0 0 16vh;
+  margin: 4vh 0 4vh 16vh;
   border-radius: 8px;
   box-shadow:
     1px 1px 3px #c8c9de,
@@ -154,7 +154,7 @@ $default-img: radial-gradient(circle, #ffffff, #dbbbc6, #d9a3b5, #c35e7f, #a8134
 .poke-ability {
   position: relative;
   top: -17vh;
-  height: 14vh;
+  height: 12vh;
   width: 34vh;
   left: 6vh;
   background: linear-gradient(179deg, #ffffff5c, transparent);

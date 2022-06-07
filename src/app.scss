@@ -45,8 +45,9 @@ h4, span{
     margin: 2vh 4vh 6vh 4vh;
   }
   .card-inner{
-    top: 0;
+    // top: -2vh;
   }
+
 
   .image-poke-logo {
     img {
@@ -71,4 +72,14 @@ h4, span{
     display: none;
   }
 
+}
+
+@media screen and (min-width: 400px) {
+  // .card-outer-container {
+  //     margin: 4vh 0vh 4vh 16vh;
+  //   }
+
+  .card-inner{
+    top: 2vh;
+  }
 }

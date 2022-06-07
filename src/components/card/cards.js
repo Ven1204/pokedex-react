@@ -17,7 +17,7 @@ function Card({ pokemon }) {
     background: conic-gradient(#ff0000, #7c0909, #9d0000, #f04949, #d00f0f, #670d0d, #ff0000);
     height: 66vh;
     width: 46vh;
-    margin: 2vh;
+    margin: 0 2vh;
     position: relative;
 `;
 
@@ -25,7 +25,7 @@ function Card({ pokemon }) {
   return (
       <div className='card-outer-container'>
         {/* if statement to check the type  */}
-<Styledfire>
+<Styledfire className='card-inner'>
         {/* <div className="card-inner"> */}
           <div className='card-name_hp_stat'>
             <h2>{(pokemon.name).charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
