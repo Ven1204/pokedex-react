@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 const fire = "conic-gradient(#ff0000, #7c0909, #9d0000, #f04949, #d00f0f, #670d0d, #ff0000)"
 const water = "conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff)"
 const electric = "conic-gradient(#ffc107, #ff9800, #edae51, #ff9800, #e4c494, #be8024, #ffbf00)"
@@ -17,15 +19,21 @@ const dragon = "conic-gradient(#6c31ed, #cec5ff, #402a6c, #6124e7, #4713bc, #206
 const dark = "conic-gradient(#2d221c, #535353, #3d3d3d, #2d221c, #67625f, #a89185, #2d221c)"
 const fairy = "conic-gradient(#f87ea7, #e9c5d1, #b3315d, #f87ea7, #c73466, #dbdbdb, #f87ea7)"
 
-import styled from 'styled-components';
 
 
-export const styledfire = styled.div`
-  background: fire;
-  width: 36vh;
-  height: 24vh;
+
+export const StyledFire = styled.div`
+  background: conic-gradient(#ff0000, #7c0909, #9d0000, #f04949, #d00f0f, #670d0d, #ff0000);
+  height: 66vh;
+  width: 46vh;
+  margin: 0 2vh;
   position: relative;
-  top: 1vh;
-  left: 1vh;
-  text-align: center;
 `;
+
+export const StyledWater = styled.div`
+  background: conic-gradient(#0016ff, #142065, #2a42c3, #7e8fed, #1b5c90, #4952ba, #0016ff);
+  height: 66vh;
+  width: 46vh;
+  margin: 0 2vh;
+  position: relative;
+`

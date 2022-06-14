@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
+import { StyledWater, StyledFire } from './color-bg';
 
 
 function Card({ pokemon }) {
-  // const [type, setType] = useState("");
+  const [typeBgColor, setTypeBgColor] = useState("");
 
   const isFire = pokemon.types.map(type =>{
     if(type.type.name === 'fire'){
@@ -13,19 +14,28 @@ function Card({ pokemon }) {
     }
   })
 
-  const Styledfire = styled.div`
-    background: conic-gradient(#ff0000, #7c0909, #9d0000, #f04949, #d00f0f, #670d0d, #ff0000);
-    height: 66vh;
-    width: 46vh;
-    margin: 0 2vh;
-    position: relative;
-`;
+//   const StyledFire = styled.div`
+//     background: conic-gradient(#ff0000, #7c0909, #9d0000, #f04949, #d00f0f, #670d0d, #ff0000);
+//     height: 66vh;
+//     width: 46vh;
+//     margin: 0 2vh;
+//     position: relative;
+// `;
+  const backGround = styled.div`
+  if (pokemon.type[0] === "fire"){
+    setTypeBgColor(StyledFire);
+  } else if (pokemon.type[0] === "water"){
+    setTypeBgColor(StyledWater);
+  }
+  ` ;
 
 
   return (
       <div className='card-outer-container'>
         {/* if statement to check the type  */}
-<Styledfire className='card-inner'>
+
+
+<StyledFire className='card-inner'>
         {/* <div className="card-inner"> */}
           <div className='card-name_hp_stat'>
             <h2>{(pokemon.name).charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
@@ -74,7 +84,7 @@ function Card({ pokemon }) {
             })}
           </div>
         {/* </div> */}
-        </Styledfire>
+        </StyledFire>
       </div>
   )
 }
